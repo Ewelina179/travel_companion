@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --name postgres -e POSTGRES_USER=myprojectuser -e POSTGRES_PASSWORD=myprojectpassword -e POSTGRES_DB=myproject -v $PWD/postgres/data:/var/lib/postgresql/data -p 5432:5432 -d postgres:13.2-alpine

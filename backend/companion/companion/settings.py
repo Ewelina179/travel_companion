@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'users',
-    'offers'
+    'offers',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'companion.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 TEMPLATES = [
     {
